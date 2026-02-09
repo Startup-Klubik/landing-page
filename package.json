@@ -1,6 +1,7 @@
 {
   "name": "code-clarity-engine",
   "version": "0.0.0",
+  "homepage": "https://startup-klubik.github.io/landing-page/",
   "private": true,
   "type": "module",
   "scripts": {
