@@ -7,8 +7,6 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { useMemo } from "react";
 
-const queryClient = new QueryClient();
-
 const App = () => {
   const queryClient = useMemo(() => new QueryClient(), []);
   return (

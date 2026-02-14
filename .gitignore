@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# TypeScript build artifacts
+*.tsbuildinfo
+*.bak
+vite.config.d.ts
+vite.config.js
+
+# Build artifacts in src (should not be committed)
+src/**/*.js
+src/**/*.d.ts
+!src/vite-env.d.ts

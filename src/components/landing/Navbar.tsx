@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Code2 } from "lucide-react";
 
 const Navbar = () => {
