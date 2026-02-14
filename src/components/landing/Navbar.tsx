@@ -9,6 +9,8 @@ const Navbar = () => {
           <img
             src="Icon-500-500-color.svg"
             alt="Dokero Logo"
+            width="32"
+            height="32"
             className="w-8 h-8"
           />
           <span className="font-semibold text-lg">Dokero</span>
