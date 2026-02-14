@@ -1,6 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { Code2 } from "lucide-react";
-const Footer = () => {
-    return (_jsx("footer", { className: "py-12 border-t border-border/50", children: _jsx("div", { className: "container mx-auto px-6", children: _jsxs("div", { className: "flex flex-col md:flex-row items-center justify-between gap-6", children: [_jsxs("div", { className: "flex items-center gap-2", children: [_jsx("div", { className: "w-8 h-8 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center", children: _jsx(Code2, { className: "w-4 h-4 text-primary" }) }), _jsx("span", { className: "font-semibold", children: "Dokero" })] }), _jsxs("div", { className: "flex items-center gap-8 text-sm text-muted-foreground", children: [_jsx("a", { href: "#", className: "hover:text-foreground transition-colors", children: "Privacy" }), _jsx("a", { href: "#", className: "hover:text-foreground transition-colors", children: "Terms" }), _jsx("a", { href: "mailto:hello@dokero.dev", className: "hover:text-foreground transition-colors", children: "Contact" })] }), _jsx("p", { className: "text-sm text-muted-foreground", children: "\u00A9 2025 Dokero. All rights reserved." })] }) }) }));
-};
-export default Footer;
