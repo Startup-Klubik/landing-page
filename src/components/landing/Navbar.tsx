@@ -1,3 +1,6 @@
+import { ArrowRight } from "lucide-react";
+import { Button } from "../ui/button";
+
 const Navbar = () => {
   return (
     <nav className="nav-blur fixed top-0 left-0 right-0 z-50">
@@ -22,6 +25,11 @@ const Navbar = () => {
             ROI
           </a>
         </div>
+
+        <Button variant="hero" size="sm">
+          Book a Demo
+        </Button>
+
       </div>
     </nav>
   );
