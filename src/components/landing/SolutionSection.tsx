@@ -1,4 +1,5 @@
 import { GitBranch, Zap, GraduationCap, Workflow } from "lucide-react";
+import ScreenshotCarousel from "./ScreenshotCarousel";
 
 const features = [
   {
@@ -32,7 +33,7 @@ const SolutionSection = () => {
     <section id="solution" className="py-32 relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
@@ -44,13 +45,13 @@ const SolutionSection = () => {
             <span className="text-gradient">never sleeps</span>
           </h2>
           <p className="section-subheading mx-auto">
-            Dokero lives alongside your codebase, reading and understanding every line. 
+            Dokero lives alongside your codebase, reading and understanding every line.
             Your developers get instant answers, not more meetings.
           </p>
         </div>
 
         {/* Features grid */}
-     <div className="grid md:grid-cols-2 gap-16 md:gap-28 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-16 md:gap-28 max-w-4xl mx-auto">
 
           {features.map((feature, index) => (
             <div
@@ -62,11 +63,11 @@ const SolutionSection = () => {
                   {feature.highlight}
                 </span>
               </div>
-              
+
               <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <feature.icon className="w-6 h-6 text-primary" />
               </div>
-              
+
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">
                 {feature.description}
@@ -75,28 +76,27 @@ const SolutionSection = () => {
           ))}
         </div>
 
-        {/* Code demo placeholder */}
-        <div className="mt-20 max-w-4xl mx-auto">
-          <div className="code-block p-1">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-border/50">
-              <div className="w-3 h-3 rounded-full bg-destructive/50" />
-              <div className="w-3 h-3 rounded-full bg-primary/50" />
-              <div className="w-3 h-3 rounded-full bg-secondary/50" />
-              <span className="ml-4 text-xs text-muted-foreground">dokero-cli</span>
-            </div>
-            <div className="p-6 space-y-3">
-              <div className="flex items-start gap-2">
-                <span className="text-primary">$</span>
-                <span className="text-foreground">dokero ask "How does the payment flow work?"</span>
-              </div>
-              <div className="text-muted-foreground pl-4 border-l-2 border-primary/30">
-                <p className="mb-2">Analyzing codebase...</p>
-                <p className="text-foreground">The payment flow consists of 3 main components:</p>
-                <p className="text-primary">→ PaymentController → StripeService → OrderRepository</p>
-                <p className="mt-2">Interactive diagram generated. Opening in browser...</p>
-              </div>
-            </div>
+        {/* App screenshots carousel */}
+        <div className="mt-20 max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              See Dokero in <span className="text-gradient">Action</span>
+            </h3>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Transform complex codebases into interactive architecture diagrams.
+              Explore how engineering teams visualize and understand their systems instantly.
+            </p>
           </div>
+
+          <ScreenshotCarousel
+            images={[
+              "/knowledge-hub.png",
+              "/tutorial-flow.png",
+              "/git-diff.png",
+            ]}
+            autoPlay={true}
+            interval={5000}
+          />
         </div>
       </div>
     </section>
