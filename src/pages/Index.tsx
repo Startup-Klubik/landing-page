@@ -12,19 +12,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <Hero />
-      <Suspense fallback={<div className="h-96" />}>
-        <ProblemSection />
-      </Suspense>
-      <Suspense fallback={<div className="h-96" />}>
-        <SolutionSection />
-      </Suspense>
-      <Suspense fallback={<div className="h-96" />}>
-        <ValueSection />
-      </Suspense>
-      <Suspense fallback={<div className="h-96" />}>
-        <CTASection />
-      </Suspense>
+      <main>
+        <Hero />
+        <Suspense fallback={<div className="h-96" />}>
+          <ProblemSection />
+        </Suspense>
+        <Suspense fallback={<div className="h-96" />}>
+          <SolutionSection />
+        </Suspense>
+        <Suspense fallback={<div className="h-96" />}>
+          <ValueSection />
+        </Suspense>
+        <Suspense fallback={<div className="h-96" />}>
+          <CTASection />
+        </Suspense>
+      </main>
       <Suspense fallback={<div className="h-96" />}>
         <Footer />
       </Suspense>
