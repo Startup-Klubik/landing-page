@@ -4,11 +4,12 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/landing-page/' : '/',
   server: {
     host: "::",
     port: 8080,
     hmr: {
-      overlay: false,
+      overlay: true,
     },
   },
   build: {
