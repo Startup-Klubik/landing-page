@@ -2,6 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
+  const scrollToForm = () => {
+    document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background glows */}
@@ -41,7 +45,7 @@ const Hero = () => {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-400">
-            <Button variant="hero" size="xl">
+            <Button variant="hero" size="xl" onClick={scrollToForm}>
               Book a Demo
               <ArrowRight className="w-5 h-5" />
             </Button>
