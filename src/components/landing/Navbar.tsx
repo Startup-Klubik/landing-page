@@ -2,6 +2,10 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 const Navbar = () => {
+  const scrollToForm = () => {
+    document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className="nav-blur fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
@@ -28,7 +32,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <Button variant="hero" size="sm">
+        <Button variant="hero" size="sm" onClick={scrollToForm}>
           Book a Demo
         </Button>
 
