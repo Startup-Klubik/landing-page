@@ -76,7 +76,7 @@
   }
 
   .glow-box {
-    box-shadow: 
+    box-shadow:
       0 0 20px -5px hsl(var(--glow-primary) / 0.3),
       0 0 60px -10px hsl(var(--glow-primary) / 0.15);
   }
@@ -91,11 +91,9 @@
 
   .stat-card {
     @apply glass-card rounded-2xl p-8;
-    background: linear-gradient(
-      45deg,
-      hsl(var(--card) / 0.8) 0%,
-      hsl(var(--surface-elevated) / 0.6) 100%
-    );
+    background: linear-gradient(45deg,
+        hsl(var(--card) / 0.8) 0%,
+        hsl(var(--surface-elevated) / 0.6) 100%);
   }
 
   .feature-card {
@@ -156,9 +154,12 @@
   }
 
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-20px);
     }
@@ -169,14 +170,92 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
 
-  .delay-100 { animation-delay: 0.1s; }
-  .delay-200 { animation-delay: 0.2s; }
-  .delay-300 { animation-delay: 0.3s; }
-  .delay-400 { animation-delay: 0.4s; }
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  /* Grain Texture Background Effect */
+  .bg-layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .circle-a,
+  .circle-b {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+  }
+
+  .circle-b {
+    width: 500px;
+    height: 500px;
+  }
+
+  .circle-a {
+    top: 10%;
+    left: 5%;
+  }
+
+  .circle-b {
+    bottom: 10%;
+    right: 5%;
+  }
+
+  /* Blurred circle SVG background */
+  .circle-a::before,
+  .circle-b::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(30px);
+  }
+
+  .circle-a::before {
+    background-image: url("/circle.svg");
+    opacity: 0.8;
+  }
+
+  .circle-b::before {
+    background-image: url("/circlee.svg");
+    opacity: 0.8;
+  }
+
+  /* Grain texture overlay - NOT blurred, fully opaque, extended to cover blur */
+  .circle-a::after,
+  .circle-b::after {
+    content: "";
+    position: absolute;
+    inset: -80px;
+    /* Extend beyond container to fully cover blur spread */
+    background-image: url("/Rectangle.png");
+    background-size: cover;
+    opacity: 0.5;
+    background-position: center;
+    pointer-events: none;
+  }
 }
