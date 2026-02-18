@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight, Shield, Clock, Sparkles, Mail } from "lucide-react";
 import { useState, FormEvent } from "react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const CTASection = () => {
   const [email, setEmail] = useState("");
@@ -28,13 +29,21 @@ const CTASection = () => {
     }
 
     setIsSubmitting(true);
-    
-    // Simulate submission delay
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
-    toast.success("Thanks! We'll contact you soon.");
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        { from_email: email },
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+      );
+      toast.success("Thanks! We'll contact you soon.");
+      setIsSubmitted(true);
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
