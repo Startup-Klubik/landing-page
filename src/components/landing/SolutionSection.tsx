@@ -17,7 +17,7 @@ const features = [
   {
     icon: GitBranch,
     title: "On-Demand & Always in Sync",
-    description: "Because visuals and tutorials are presented on-demand, your documentation is always exactly as current as your latest changes.",
+    description: "Your visuals and tutorials are dynamically processed in real-time, providing an accurate reflection of your current system.",
     highlight: "Auto-sync",
   },
   {

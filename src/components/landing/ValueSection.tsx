@@ -10,11 +10,11 @@ const ValueSection = () => {
             The Return on Investment
           </p>
           <h2 className="section-heading mb-6">
-            The math is{" "}
-            <span className="text-gradient">undeniable</span>
+            Bridging the gap to  {" "}
+            <span className="text-gradient">peak capacity</span>
           </h2>
           <p className="section-subheading mx-auto">
-            Turn the hidden cost of code comprehension back into engineering capacity.
+            Turn the hidden cost of code comprehension into engineering capacity.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ const ValueSection = () => {
             </div>
             <p className="text-muted-foreground text-sm mb-2">Average velocity increase</p>
             <p className="font-mono text-4xl font-bold text-gradient mb-2">30%</p>
-            <p className="text-muted-foreground text-sm">Reclaimed from context-gathering</p>
+            <p className="text-muted-foreground text-sm">Reclaimed from context gathering</p>
           </div>
 
           {/* Team card */}

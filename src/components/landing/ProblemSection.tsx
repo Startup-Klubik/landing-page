@@ -14,7 +14,7 @@ const problems = [
   {
     icon: Search,
     title: "The Reverse-Engineering Reality",
-    description: "As your system scales, its complexity naturally deepens. Navigating in the code starts absorbing valuable time that would otherwise go toward shipping new features.",
+    description: "As your system scales, its complexity naturally deepens. Navigating the codebase consumes valuable time that could be spent shipping new features.",
   },
 ];
 
