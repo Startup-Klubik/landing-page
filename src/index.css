@@ -22,7 +22,7 @@
     --secondary-foreground: 210 40% 98%;
 
     --muted: 222 30% 14%;
-    --muted-foreground: 215 20% 55%;
+    --muted-foreground: 215 12% 85%;
 
     --accent: 27 100% 45%;
     --accent-foreground: 222 47% 6%;
@@ -37,7 +37,7 @@
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --glow-primary: 27 100% 45%;
+    --glow-primary: 28 100% 50%;
     --glow-secondary: 285 100% 45%;
     --surface-elevated: 222 40% 10%;
     --text-gradient-start: 27 100% 45%;
@@ -74,7 +74,7 @@
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(45deg, hsl(var(--text-gradient-start)), hsl(var(--text-gradient-end)));
   }
-
+  
   .glow-box {
     box-shadow: 
       0 0 20px -5px hsl(var(--glow-primary) / 0.3),
@@ -82,7 +82,7 @@
   }
 
   .glow-text {
-    text-shadow: 0 0 40px hsl(var(--glow-primary) / 0.5);
+    text-shadow: 0 0 40px hsl(var(--glow-primary) / 0.25);
   }
 
   .glass-card {
@@ -148,7 +148,17 @@
   }
 
   .animate-pulse-slow {
-    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    /* Changed from 3s to 8s and updated the keyframe link */
+    animation: subtle-pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes subtle-pulse {
+    0%, 100% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.2; /* This makes it "less bright" by only dipping 15% */
+    }
   }
 
   .animate-slide-up {

@@ -46,39 +46,39 @@ const CTASection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-primary font-mono text-sm mb-4 tracking-wider uppercase">
-            Start Small. Scale Fast.
+            Validate first. Deploy with confidence.
           </p>
           
           <h2 className="section-heading mb-6">
-            Ready to recover your{" "}
-            <span className="text-gradient">engineering velocity?</span>
+            Ready to see your {" "}
+            <span className="text-gradient">team's true potential?</span>
           </h2>
           
           <p className="section-subheading mx-auto mb-10">
-            Begin with a 2-month Discovery Phase. We'll map your bottlenecks, 
-            configure the engine, and prove the value before you commit.
+            Begin with a 2-month Discovery Phase. We'll map your specific needs, 
+            tailor the solution to your workflow, and plan out any security compliance.
           </p>
 
           {/* Features list */}
           <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Shield className="w-4 h-4 text-primary" />
-              <span>No commitment required</span>
+              <span>Fixed-Scope Discovery Phase</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Clock className="w-4 h-4 text-primary" />
-              <span>2-month pilot program</span>
+              <span>Custom Blueprint & Prototype</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span>Results-based expansion</span>
+              <span>Milestone-Gated Scaling</span>
             </div>
           </div>
 
           {/* Email Form */}
           <div className="max-w-md mx-auto">
             <p className="text-base text-foreground/80 mb-6 text-center">
-              Leave your email and we'll schedule a demo to show you the engine in action
+              Leave your email to schedule a meeting and discuss your team's current velocity and overall goals.
             </p>
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="flex gap-2">

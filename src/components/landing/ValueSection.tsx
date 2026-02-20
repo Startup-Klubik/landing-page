@@ -7,14 +7,14 @@ const ValueSection = () => {
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
           <p className="text-primary font-mono text-sm mb-4 tracking-wider uppercase">
-            The ROI
+            The Return on Investment
           </p>
           <h2 className="section-heading mb-6">
             The math is{" "}
             <span className="text-gradient">undeniable</span>
           </h2>
           <p className="section-subheading mx-auto">
-            Transform wasted comprehension time into shipping velocity.
+            Turn the hidden cost of code comprehension back into engineering capacity.
           </p>
         </div>
 
@@ -25,9 +25,9 @@ const ValueSection = () => {
             <div className="w-14 h-14 rounded-2xl bg-muted/50 border border-border/50 flex items-center justify-center mx-auto mb-6">
               <Calculator className="w-7 h-7 text-muted-foreground" />
             </div>
-            <p className="text-muted-foreground text-sm mb-2">Annual cost per senior dev</p>
-            <p className="font-mono text-4xl font-bold mb-2">900K</p>
-            <p className="text-muted-foreground text-sm">DKK / year</p>
+            <p className="text-muted-foreground text-sm mb-2">Size of a team</p>
+            <p className="font-mono text-4xl font-bold mb-2">10</p>
+            <p className="text-muted-foreground text-sm">developers</p>
           </div>
 
           {/* Recovery card */}
@@ -35,9 +35,9 @@ const ValueSection = () => {
             <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center mx-auto mb-6">
               <TrendingUp className="w-7 h-7 text-primary" />
             </div>
-            <p className="text-muted-foreground text-sm mb-2">Capacity recovered per dev</p>
-            <p className="font-mono text-4xl font-bold text-gradient mb-2">270K</p>
-            <p className="text-muted-foreground text-sm">DKK / year</p>
+            <p className="text-muted-foreground text-sm mb-2">Average velocity increase</p>
+            <p className="font-mono text-4xl font-bold text-gradient mb-2">30%</p>
+            <p className="text-muted-foreground text-sm">Reclaimed from context-gathering</p>
           </div>
 
           {/* Team card */}
@@ -45,9 +45,9 @@ const ValueSection = () => {
             <div className="w-14 h-14 rounded-2xl bg-muted/50 border border-border/50 flex items-center justify-center mx-auto mb-6">
               <Users2 className="w-7 h-7 text-muted-foreground" />
             </div>
-            <p className="text-muted-foreground text-sm mb-2">Value gained (10 devs)</p>
-            <p className="font-mono text-4xl font-bold mb-2">2.7M</p>
-            <p className="text-muted-foreground text-sm">DKK / year</p>
+            <p className="text-muted-foreground text-sm mb-2">Effective capacity</p>
+            <p className="font-mono text-4xl font-bold mb-2">13</p>
+            <p className="text-muted-foreground text-sm">Developers shipping code</p>
           </div>
         </div>
 
@@ -61,7 +61,7 @@ const ValueSection = () => {
               Hiring <span className="text-gradient">3 senior engineers</span>
             </p>
             <p className="text-muted-foreground">
-              Without the recruiting fees. Without the onboarding time. Without the monthly payroll.
+              Without the recruiting fees. Without the onboarding time. Without the management overhead.
             </p>
           </div>
         </div>
