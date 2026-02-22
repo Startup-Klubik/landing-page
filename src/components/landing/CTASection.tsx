@@ -16,7 +16,7 @@ const CTASection = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (!email.trim()) {
       toast.error("Please enter your email address");
       return;
@@ -28,34 +28,34 @@ const CTASection = () => {
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate submission delay
     await new Promise(resolve => setTimeout(resolve, 500));
-    
+
     toast.success("Thanks! We'll contact you soon.");
     setIsSubmitted(true);
     setIsSubmitting(false);
   };
 
   return (
-    <section id="demo-form" className="py-32 relative overflow-hidden">
+    <section id="demo-form" className="py-32 relative overflow-x-clip">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
       <div className="hero-glow hero-glow-primary bottom-0 left-1/2 -translate-x-1/2 animate-pulse-slow" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-primary font-mono text-sm mb-4 tracking-wider uppercase">
             Validate first. Deploy with confidence.
           </p>
-          
+
           <h2 className="section-heading mb-6">
             Ready to see your {" "}
             <span className="text-gradient">team's true potential?</span>
           </h2>
-          
+
           <p className="section-subheading mx-auto mb-10">
-            Begin with a 2-month Discovery Phase. We'll map your specific needs, 
+            Begin with a 2-month Discovery Phase. We'll map your specific needs,
             tailor the solution to your workflow, and plan out any security compliance.
           </p>
 
@@ -94,8 +94,8 @@ const CTASection = () => {
                     aria-label="Email address"
                   />
                 </div>
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   disabled={isSubmitting}
                   size="sm"
                   variant="default"

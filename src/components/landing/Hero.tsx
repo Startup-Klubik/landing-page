@@ -7,7 +7,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-x-clip pt-16">
       {/* Background glows */}
       <div className="hero-glow hero-glow-primary -top-40 -left-40 animate-glow-pulse" />
       <div className="hero-glow hero-glow-secondary top-1/2 -right-40 animate-glow-pulse [animation-delay:200ms]" />
