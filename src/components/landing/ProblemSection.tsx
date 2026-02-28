@@ -3,24 +3,18 @@ import { AlertTriangle, Users, Search } from "lucide-react";
 const problems = [
   {
     icon: AlertTriangle,
-    title: "The Maintenance Trap",
-    description: "Documentation is dead on arrival. By the time it's written, the code has already changed. Wikis become graveyards of outdated information.",
-    stat: "100%",
-    statLabel: "of wikis become stale",
+    title: "Documentation Lag",
+    description: "When your team ships fast, static documentation struggles to keep up. Important system knowledge often lives in wikis that naturally fall out of sync with the code.",
   },
   {
     icon: Users,
     title: "The Knowledge Silo",
-    description: "Your senior engineers become the 'source of truth.' They spend their expensive hours answering questions instead of building.",
-    stat: "40%",
-    statLabel: "of senior time lost",
+    description: "Relying on senior engineers as guides interrupts their deep work. Worse, it traps system knowledge in a few minds - leaving whenever they do.",
   },
   {
     icon: Search,
     title: "The Reverse-Engineering Reality",
-    description: "Developers stop being builders and become detectives. Hours spent reading thousands of lines just to add one feature or fix a bug.",
-    stat: "58%",
-    statLabel: "of time wasted",
+    description: "As your system scales, its complexity naturally deepens. Navigating the codebase consumes valuable time that could be spent shipping new features.",
   },
 ];
 
@@ -31,15 +25,17 @@ const ProblemSection = () => {
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
           <p className="text-primary font-mono text-sm mb-4 tracking-wider uppercase">
-            The Hidden Cost
+            The Hidden Costs
           </p>
           <h2 className="section-heading mb-6">
-            You're paying developers to be{" "}
-            <span className="text-gradient">confused</span>
+            Understanding the {" "}
+            <span className="text-gradient">friction</span>
           </h2>
           <p className="section-subheading mx-auto">
-            Less than a third of your engineering payroll goes toward writing new code. 
-            The rest? Pure code comprehension overhead.
+            Growth creates complexity, and complexity creates cognitive load.
+          </p>
+          <p className="section-subheading mx-auto">
+            Unlocking your team's true capacity starts with understanding these three natural bottlenecks.
           </p>
         </div>
 
@@ -56,18 +52,10 @@ const ProblemSection = () => {
               </div>
               
               <h3 className="text-xl font-semibold mb-3">{problem.title}</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              {/* Removed mb-6 so it doesn't create extra empty space at the bottom */}
+              <p className="text-muted-foreground leading-relaxed">
                 {problem.description}
               </p>
-              
-              <div className="pt-6 border-t border-border/50">
-                <span className="font-mono text-3xl font-bold text-destructive">
-                  {problem.stat}
-                </span>
-                <span className="text-sm text-muted-foreground ml-2">
-                  {problem.statLabel}
-                </span>
-              </div>
             </div>
           ))}
         </div>

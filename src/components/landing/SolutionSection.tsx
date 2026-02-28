@@ -5,26 +5,26 @@ const features = [
   {
     icon: Workflow,
     title: "Instant Architecture Diagrams",
-    description: "Ask a question, get an interactive visual map of your system. Complex dependencies become clear in seconds, not hours.",
+    description: "Get an interactive visual map of your system. Complex dependencies become clear in seconds, not hours.",
     highlight: "Visual-first",
   },
   {
+    icon: GraduationCap,
+    title: "Instant Knowledge Transfer",
+    description: "Generate visual, step-by-step tutorials on demand. Whether a new hire is ramping up or a developer is fixing a bug in a teammate's undocumented code, anyone can gain context without reverse-engineering.",
+    highlight: "Self-serve",
+  },
+  {
     icon: GitBranch,
-    title: "Always Up-to-Date",
-    description: "Connected to your repository. When code changes, documentation updates automatically. No more stale wikis.",
+    title: "On-Demand & Always in Sync",
+    description: "Your visuals and tutorials are dynamically processed in real-time, providing an accurate reflection of your current system.",
     highlight: "Auto-sync",
   },
   {
     icon: Zap,
-    title: "Natural Language Queries",
-    description: "Ask 'How does user authentication work?' and get instant, contextual answers with code references.",
+    title: "Chat with Dokero",
+    description: "Ask questions like 'Which services depend on the payment module?' or 'Map the user data flow,' and get an instant, interactive visual map backed by exact code references.",
     highlight: "AI-powered",
-  },
-  {
-    icon: GraduationCap,
-    title: "Onboarding on Autopilot",
-    description: "New hires get AI-guided interactive tutorials. Reduce onboarding time by up to 80%.",
-    highlight: "Self-serve",
   },
 ];
 
@@ -45,8 +45,7 @@ const SolutionSection = () => {
             <span className="text-gradient">never sleeps</span>
           </h2>
           <p className="section-subheading mx-auto">
-            Dokero lives alongside your codebase, reading and understanding every line.
-            Your developers get instant answers, not more meetings.
+            Let Dokero read and understand every line. Give your developers instant access to the context they need to stay in the flow.
           </p>
         </div>
 
@@ -83,8 +82,7 @@ const SolutionSection = () => {
               See Dokero in <span className="text-gradient">Action</span>
             </h3>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Transform complex codebases into interactive architecture diagrams.
-              Explore how engineering teams visualize and understand their systems instantly.
+              Turn complex code into clear, interactive diagrams on demand. See how easily your team can map dependencies and understand their systems.
             </p>
           </div>
 
