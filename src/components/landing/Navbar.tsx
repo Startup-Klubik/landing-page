@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <nav className="nav-blur fixed top-0 left-0 right-0 z-50">
-      <div className="container mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 h-16 flex items-center justify-between">
         <a href="/" className="flex items-center gap-2 group">
           <img
             src="Icon-500-500-color.svg"

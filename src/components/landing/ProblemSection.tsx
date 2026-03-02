@@ -5,7 +5,7 @@ const problems = [
   {
     icon: Clock,
     title: 'Documentation Lag',
-    description: 'When your team ships fast, static docs struggle to keep up. Critical system knowledge gets trapped in wikis that instantly fall out of sync with your code.',
+    description: 'When your team ships fast, static docs struggle to keep up. Critical system knowledge gets trapped in wikis that instantly fall behind.',
     iconColor: '#ff4444',
     svg: anim1,
     bgGradient: `linear-gradient(to bottom right, ${colors.shadowGrey}, #2a1a23)`,
@@ -14,7 +14,7 @@ const problems = [
   {
     icon: Lock,
     title: 'The Knowledge Silo',
-    description: 'Relying on senior engineers as guides interrupts their deep work. Worse, it traps system knowledge in a few minds — leaving whenever they do.',
+    description: 'Relying on senior engineers as guides interrupts their deep work. Worse, it traps system knowledge in few minds and disappears whenever they do.',
     iconColor: colors.purple,
     svg: anim2,
     bgGradient: `linear-gradient(to bottom right, ${colors.shadowGrey}, ${colors.purple}15)`,
@@ -23,7 +23,7 @@ const problems = [
   {
     icon: Compass,
     title: 'Reverse-Engineering Reality',
-    description: 'As your system scales, complexity deepens. Blindly navigating the codebase to trace dependencies consumes valuable time meant for shipping features.',
+    description: 'As your system scales, complexity deepens. Blindly navigating the codebase to trace dependencies consumes valuable time meant for shipping high-impact features.',
     iconColor: colors.autumnLeaf,
     svg: anim3,
     bgGradient: `linear-gradient(to bottom right, ${colors.shadowGrey}, ${colors.autumnLeaf}15)`,
@@ -33,10 +33,10 @@ const problems = [
 
 const ProblemSection = () => {
   return (
-    <section id="problem" className="py-32 relative overflow-x-clip">
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="problem" className="py-28 md:py-32 xl:py-36 relative overflow-x-clip">
+      <div className="container mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 relative z-10">
         {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
+        <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20 xl:mb-24">
           <p className="text-primary font-mono text-sm mb-4 tracking-wider uppercase">
             The Hidden Costs
           </p>
@@ -53,7 +53,7 @@ const ProblemSection = () => {
         </div>
 
         {/* Problem cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid w-full md:grid-cols-3 gap-9 xl:gap-12 max-w-[90rem] mx-auto">
           {problems.map((problem, index) => (
             <div
               key={index}
@@ -62,7 +62,7 @@ const ProblemSection = () => {
             >
               {/* SVG Preview Box */}
               <div
-                className="p-6 aspect-[4/3] flex items-center justify-center relative overflow-hidden border-b border-border/40"
+                className="p-5 lg:p-6 aspect-[16/11] xl:aspect-[16/10] flex items-center justify-center relative overflow-hidden border-b border-border/40"
                 style={{ background: problem.bgGradient }}
               >
                 <div dangerouslySetInnerHTML={{ __html: problem.svg }} className="w-full h-full drop-shadow-2xl z-10" />
@@ -71,13 +71,13 @@ const ProblemSection = () => {
               </div>
 
               {/* Description & Content */}
-              <div className="p-8 flex flex-col flex-grow relative">
+              <div className="p-6 lg:p-7 flex flex-col flex-grow relative">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 border border-border/50 flex items-center justify-center mb-6 transition-colors"
                   style={{ backgroundColor: `${problem.iconColor}15`, borderColor: `${problem.iconColor}33` }}>
                   <problem.icon className="w-6 h-6" style={{ color: problem.iconColor }} />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3">{problem.title}</h3>
+                <h3 className="text-xl xl:text-2xl font-semibold mb-3">{problem.title}</h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   {problem.description}
                 </p>

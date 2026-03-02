@@ -15,8 +15,8 @@ const Hero = () => {
       {/* Grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="container mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 relative z-10">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-border/50 mb-8 animate-slide-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -26,13 +26,13 @@ const Hero = () => {
           </div>
 
           {/* Main headline */}
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 animate-slide-up delay-100">
+          <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold tracking-tight mb-6 xl:mb-8 animate-slide-up delay-100">
             <span className="text-gradient glow-text">Unlock</span>{" "}
             your team's {" "}
             <span className="text-gradient glow-text">hidden capacity.</span>{" "}
           </h1>
 
-          <p className="text-lg text-muted-foreground mb-10 animate-slide-up delay-300">
+          <p className="text-lg xl:text-xl text-muted-foreground mb-10 xl:mb-12 animate-slide-up delay-300">
             Code complexity causes developers to spend up to 58% of their time just reading code.
           </p>
 

@@ -37,6 +37,7 @@ const CTASection = () => {
         { email: email, time: new Date().toLocaleString() },
         { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       );
+
       toast.success("Thanks! We'll contact you soon.");
       setIsSubmitted(true);
     } catch {
@@ -47,13 +48,13 @@ const CTASection = () => {
   };
 
   return (
-    <section id="demo-form" className="py-32 relative overflow-x-clip">
+    <section id="demo-form" className="py-28 md:py-32 xl:py-36 relative overflow-x-clip">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
       <div className="hero-glow hero-glow-primary bottom-0 left-1/2 -translate-x-1/2 animate-pulse-slow" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
+      <div className="container mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
           <p className="text-primary font-mono text-sm mb-4 tracking-wider uppercase">
             Validate first. Deploy with confidence.
           </p>
@@ -85,7 +86,7 @@ const CTASection = () => {
           </div>
 
           {/* Email Form */}
-          <div className="max-w-md mx-auto">
+          <div className="max-w-lg mx-auto">
             <p className="text-base text-foreground/80 mb-6 text-center">
               Leave your email to schedule a meeting and discuss your team's current velocity and overall goals.
             </p>

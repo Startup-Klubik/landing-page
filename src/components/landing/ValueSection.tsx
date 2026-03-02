@@ -2,10 +2,10 @@ import { Calculator, TrendingUp, Users2 } from "lucide-react";
 
 const ValueSection = () => {
   return (
-    <section id="value" className="py-32 relative">
-      <div className="container mx-auto px-6">
+    <section id="value" className="py-28 md:py-32 xl:py-36 relative">
+      <div className="container mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12">
         {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
+        <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20 xl:mb-24">
           <p className="text-primary font-mono text-sm mb-4 tracking-wider uppercase">
             The Return on Investment
           </p>
@@ -19,41 +19,41 @@ const ValueSection = () => {
         </div>
 
         {/* Value proposition cards */}
-        <div className="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 xl:gap-10 max-w-6xl xl:max-w-7xl mx-auto">
           {/* Cost card */}
-          <div className="stat-card text-center">
+          <div className="stat-card text-center xl:p-10">
             <div className="w-14 h-14 rounded-2xl bg-muted/50 border border-border/50 flex items-center justify-center mx-auto mb-6">
               <Calculator className="w-7 h-7 text-muted-foreground" />
             </div>
             <p className="text-muted-foreground text-sm mb-2">Size of a team</p>
-            <p className="font-mono text-4xl font-bold mb-2">10</p>
+            <p className="font-mono text-4xl xl:text-5xl font-bold mb-2">10</p>
             <p className="text-muted-foreground text-sm">developers</p>
           </div>
 
           {/* Recovery card */}
-          <div className="stat-card text-center glow-box">
+          <div className="stat-card text-center glow-box xl:p-10">
             <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/30 flex items-center justify-center mx-auto mb-6">
               <TrendingUp className="w-7 h-7 text-primary" />
             </div>
             <p className="text-muted-foreground text-sm mb-2">Average velocity increase</p>
-            <p className="font-mono text-4xl font-bold text-gradient mb-2">30%</p>
+            <p className="font-mono text-4xl xl:text-5xl font-bold text-gradient mb-2">30%</p>
             <p className="text-muted-foreground text-sm">Reclaimed from context gathering</p>
           </div>
 
           {/* Team card */}
-          <div className="stat-card text-center">
+          <div className="stat-card text-center xl:p-10">
             <div className="w-14 h-14 rounded-2xl bg-muted/50 border border-border/50 flex items-center justify-center mx-auto mb-6">
               <Users2 className="w-7 h-7 text-muted-foreground" />
             </div>
             <p className="text-muted-foreground text-sm mb-2">Effective capacity</p>
-            <p className="font-mono text-4xl font-bold mb-2">13</p>
+            <p className="font-mono text-4xl xl:text-5xl font-bold mb-2">13</p>
             <p className="text-muted-foreground text-sm">Developers shipping code</p>
           </div>
         </div>
 
         {/* Bottom insight */}
-        <div className="mt-16 max-w-3xl mx-auto">
-          <div className="glass-card rounded-2xl p-8 text-center">
+        <div className="mt-16 xl:mt-20 max-w-4xl mx-auto">
+          <div className="glass-card rounded-2xl p-8 xl:p-10 text-center">
             <p className="text-lg text-muted-foreground mb-4">
               Deploying Dokero is the mathematical equivalent of
             </p>

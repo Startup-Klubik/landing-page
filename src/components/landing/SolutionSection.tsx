@@ -14,7 +14,7 @@ const features = [
   {
     icon: GraduationCap,
     title: "Instant Knowledge Transfer",
-    description: "Generate visual, step-by-step tutorials on demand. Anyone can gain context without reverse-engineering, even when code lacks any formal documentation.",
+    description: "Generate visual, step-by-step tutorials on demand. Anyone can gain context, even when code lacks any formal documentation.",
     highlight: "Self-serve",
     svg: anim2,
     bgGradient: `linear-gradient(to bottom right, ${colors.autumnLeaf}20, ${colors.shadowGrey}, ${colors.purple}20)`
@@ -39,13 +39,13 @@ const features = [
 
 const SolutionSection = () => {
   return (
-    <section id="solution" className="py-32 relative overflow-x-clip">
+    <section id="solution" className="py-28 md:py-32 xl:py-36 relative overflow-x-clip">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
 
-      <div className="container mx-auto px-2 md:px-3 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 xl:px-8 2xl:px-12 relative z-10">
         {/* Section header */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
+        <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20 xl:mb-24">
           <p className="text-primary font-mono text-sm mb-4 tracking-wider uppercase">
             The Solution
           </p>
@@ -59,7 +59,7 @@ const SolutionSection = () => {
         </div>
 
         {/* Features grid */}
-        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 xl:gap-12 max-w-[88rem] mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -67,7 +67,7 @@ const SolutionSection = () => {
             >
               {/* SVG Preview Box */}
               <div
-                className="p-5 aspect-[16/11] md:aspect-[21/10] flex items-center justify-center relative overflow-hidden border-b border-border/40"
+                className="p-5 lg:p-6 aspect-[16/11] md:aspect-[21/10] xl:aspect-[2/1] flex items-center justify-center relative overflow-hidden border-b border-border/40"
                 style={{ background: feature.bgGradient }}
               >
                 <div dangerouslySetInnerHTML={{ __html: feature.svg }} className="w-full h-full drop-shadow-2xl z-10" />
@@ -76,7 +76,7 @@ const SolutionSection = () => {
               </div>
 
               {/* Description & Content */}
-              <div className="p-6 flex flex-col flex-grow relative">
+              <div className="p-6 lg:p-7 flex flex-col flex-grow relative">
                 <div className="absolute top-8 right-8">
                   <span className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded-full">
                     {feature.highlight}
@@ -87,7 +87,7 @@ const SolutionSection = () => {
                   <feature.icon className="w-6 h-6 text-primary" />
                 </div>
 
-                <h3 className="text-xl font-semibold mb-3 pr-24 min-h-[3.5rem]">
+                <h3 className="text-xl xl:text-2xl font-semibold mb-3 pr-24 min-h-[3.5rem] xl:min-h-[4rem]">
                   {feature.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
@@ -99,13 +99,13 @@ const SolutionSection = () => {
         </div>
 
         {/* App screenshots carousel */}
-        <div className="mt-28 max-w-5xl mx-auto">
+        <div className="mt-24 md:mt-28 xl:mt-32 max-w-[88rem] mx-auto">
           <div className="text-center mb-12">
             <h2 className="section-heading mb-6">
             See Dokero in
             <span className="text-gradient"> Action</span>
           </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg xl:text-xl max-w-3xl mx-auto">
               Turn complex code into clear, interactive diagrams on demand. See how easily your team can map dependencies and understand their systems.
             </p>
           </div>
