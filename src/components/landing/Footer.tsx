@@ -17,19 +17,19 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="/privacy-policy" className="hover:text-foreground transition-colors">
               Privacy
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
-              Terms
-            </a>
-            <a href="mailto:hello@dokero.dev" className="hover:text-foreground transition-colors">
+            {/* <a href="#" className="hover:text-foreground transition-colors"> */}
+            {/*   Terms */}
+            {/* </a> */}
+            <a href="mailto:contact@dokero.dev" className="hover:text-foreground transition-colors">
               Contact
             </a>
           </div>
 
           <p className="text-sm text-muted-foreground">
-            © 2025 Dokero. All rights reserved.
+            © 2026 Dokero. All rights reserved.
           </p>
         </div>
       </div>
