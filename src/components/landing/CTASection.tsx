@@ -47,7 +47,7 @@ const CTASection = () => {
   };
 
   return (
-    <section id="demo-form" className="py-32 relative overflow-hidden">
+    <section id="demo-form" className="py-32 relative overflow-x-clip">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
       <div className="hero-glow hero-glow-primary bottom-0 left-1/2 -translate-x-1/2 animate-pulse-slow" />
@@ -64,7 +64,7 @@ const CTASection = () => {
           </h2>
 
           <p className="section-subheading mx-auto mb-10">
-            Begin with a 2-month Discovery Phase. We'll map your specific needs, 
+            Begin with a 2-month Discovery Phase. We'll map your specific needs,
             tailor the solution to your workflow, and plan out any security compliance.
           </p>
 

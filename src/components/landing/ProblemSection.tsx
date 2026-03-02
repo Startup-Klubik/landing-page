@@ -1,27 +1,40 @@
-import { AlertTriangle, Users, Search } from "lucide-react";
+import { Clock, Lock, Compass } from "lucide-react";
+import { colors, anim1, anim2, anim3 } from "./problem_svgs";
 
 const problems = [
   {
-    icon: AlertTriangle,
-    title: "Documentation Lag",
-    description: "When your team ships fast, static documentation struggles to keep up. Important system knowledge often lives in wikis that naturally fall out of sync with the code.",
+    icon: Clock,
+    title: 'Documentation Lag',
+    description: 'When your team ships fast, static docs struggle to keep up. Critical system knowledge gets trapped in wikis that instantly fall out of sync with your code.',
+    iconColor: '#ff4444',
+    svg: anim1,
+    bgGradient: `linear-gradient(to bottom right, ${colors.shadowGrey}, #2a1a23)`,
+    borderColor: `#332222`
   },
   {
-    icon: Users,
-    title: "The Knowledge Silo",
-    description: "Relying on senior engineers as guides interrupts their deep work. Worse, it traps system knowledge in a few minds - leaving whenever they do.",
+    icon: Lock,
+    title: 'The Knowledge Silo',
+    description: 'Relying on senior engineers as guides interrupts their deep work. Worse, it traps system knowledge in a few minds — leaving whenever they do.',
+    iconColor: colors.purple,
+    svg: anim2,
+    bgGradient: `linear-gradient(to bottom right, ${colors.shadowGrey}, ${colors.purple}15)`,
+    borderColor: `${colors.purple}33`
   },
   {
-    icon: Search,
-    title: "The Reverse-Engineering Reality",
-    description: "As your system scales, its complexity naturally deepens. Navigating the codebase consumes valuable time that could be spent shipping new features.",
-  },
+    icon: Compass,
+    title: 'Reverse-Engineering Reality',
+    description: 'As your system scales, complexity deepens. Blindly navigating the codebase to trace dependencies consumes valuable time meant for shipping features.',
+    iconColor: colors.autumnLeaf,
+    svg: anim3,
+    bgGradient: `linear-gradient(to bottom right, ${colors.shadowGrey}, ${colors.autumnLeaf}15)`,
+    borderColor: `${colors.autumnLeaf}33`
+  }
 ];
 
 const ProblemSection = () => {
   return (
-    <section id="problem" className="py-32 relative">
-      <div className="container mx-auto px-6">
+    <section id="problem" className="py-32 relative overflow-x-clip">
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
           <p className="text-primary font-mono text-sm mb-4 tracking-wider uppercase">
@@ -40,22 +53,35 @@ const ProblemSection = () => {
         </div>
 
         {/* Problem cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="feature-card group"
+              className="feature-card group relative flex flex-col overflow-hidden p-0 border border-border/40 hover:border-border/80 transition-colors"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-12 h-12 rounded-xl bg-destructive/10 border border-destructive/20 flex items-center justify-center mb-6 group-hover:bg-destructive/20 transition-colors">
-                <problem.icon className="w-6 h-6 text-destructive" />
+              {/* SVG Preview Box */}
+              <div
+                className="p-6 aspect-[4/3] flex items-center justify-center relative overflow-hidden border-b border-border/40"
+                style={{ background: problem.bgGradient }}
+              >
+                <div dangerouslySetInnerHTML={{ __html: problem.svg }} className="w-full h-full drop-shadow-2xl z-10" />
+                {/* Subtle Grid Background */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:15px_15px] pointer-events-none" />
               </div>
-              
-              <h3 className="text-xl font-semibold mb-3">{problem.title}</h3>
-              {/* Removed mb-6 so it doesn't create extra empty space at the bottom */}
-              <p className="text-muted-foreground leading-relaxed">
-                {problem.description}
-              </p>
+
+              {/* Description & Content */}
+              <div className="p-8 flex flex-col flex-grow relative">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-border/50 flex items-center justify-center mb-6 transition-colors"
+                  style={{ backgroundColor: `${problem.iconColor}15`, borderColor: `${problem.iconColor}33` }}>
+                  <problem.icon className="w-6 h-6" style={{ color: problem.iconColor }} />
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">{problem.title}</h3>
+                <p className="text-muted-foreground leading-relaxed flex-grow">
+                  {problem.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
