@@ -14,8 +14,8 @@ export const anim1 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 3
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
     <linearGradient id="p1-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="${colors.purple}" />
-      <stop offset="100%" stop-color="${colors.autumnLeaf}" />
+      <stop offset="0%" stop-color="#b500e6" />
+      <stop offset="100%" stop-color="#e67000" />
     </linearGradient>
   </defs>
   <style>
@@ -30,9 +30,9 @@ export const anim1 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 3
       100% { transform: translateX(50px); }
     }
     @keyframes p1-syncLine {
-      0%, 40% { stroke-dasharray: 4 4; stroke: ${colors.alabasterGrey}; opacity: 0.5; }
+      0%, 40% { stroke-dasharray: 4 4; stroke: #e6e6e6; opacity: 0.5; }
       45%, 90% { stroke-dasharray: 10 15; stroke: #ff4444; opacity: 0.8; }
-      100% { stroke-dasharray: 4 4; stroke: ${colors.alabasterGrey}; opacity: 0.5; }
+      100% { stroke-dasharray: 4 4; stroke: #e6e6e6; opacity: 0.5; }
     }
     @keyframes p1-warning {
       0%, 40% { opacity: 0; transform: scale(0.5); }
@@ -47,26 +47,40 @@ export const anim1 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 3
   </style>
 
   <!-- Track Lines -->
-  <line x1="50" y1="100" x2="350" y2="100" stroke="${colors.shadowGrey}" stroke-width="4" stroke-linecap="round" />
-  <line x1="50" y1="200" x2="350" y2="200" stroke="${colors.shadowGrey}" stroke-width="4" stroke-linecap="round" />
+  <line x1="50" y1="100" x2="350" y2="100" stroke="#1a1a23" stroke-width="4" stroke-linecap="round" />
+  <line x1="50" y1="200" x2="350" y2="200" stroke="#1a1a23" stroke-width="4" stroke-linecap="round" />
   
-  <text x="50" y="80" font-family="sans-serif" font-size="12" fill="${colors.alabasterGrey}" opacity="0.5" font-weight="bold">EVOLVING CODEBASE</text>
-  <text x="50" y="240" font-family="sans-serif" font-size="12" fill="${colors.alabasterGrey}" opacity="0.5" font-weight="bold">STATIC DOCUMENTATION</text>
+  <text x="50" y="80" font-family="sans-serif" font-size="12" fill="#e6e6e6" opacity="0.5" font-weight="bold">CODEBASE (SHIPPING FAST)</text>
+  <text x="50" y="240" font-family="sans-serif" font-size="12" fill="#e6e6e6" opacity="0.5" font-weight="bold">STATIC WIKI (LAGGING)</text>
 
   <!-- Sync Line (Breaking) -->
   <line x1="150" y1="120" x2="100" y2="180" stroke-width="3" class="p1-link" stroke-linecap="round" />
 
-  <!-- Code Blocks Moving Fast -->
+  <!-- Code Blocks (</> Windows) Moving Fast -->
   <g transform="translate(50, 85)">
     <g class="p1-code">
-      <rect x="0" y="0" width="40" height="30" rx="6" fill="url(#p1-grad)" filter="url(#p1-glow)" />
-      <path d="M 15 10 L 25 15 L 15 20" fill="${colors.alabasterGrey}" />
+      <!-- Window Body -->
+      <rect x="0" y="0" width="44" height="32" rx="4" fill="url(#p1-grad)" filter="url(#p1-glow)" />
+      <!-- Window Header -->
+      <path d="M 0 4 Q 0 0 4 0 L 40 0 Q 44 0 44 4 L 44 10 L 0 10 Z" fill="#1a1a23" opacity="0.4" />
+      <circle cx="6" cy="5" r="1.5" fill="#e6e6e6" />
+      <circle cx="11" cy="5" r="1.5" fill="#e6e6e6" />
+      <circle cx="16" cy="5" r="1.5" fill="#e6e6e6" />
+      <!-- Code brackets </> -->
+      <path d="M 13 14 L 7 19 L 13 24 M 31 14 L 37 19 L 31 24 M 25 12 L 19 26" fill="none" stroke="#e6e6e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </g>
   </g>
   <g transform="translate(150, 85)">
     <g class="p1-code" style="animation-delay: -1.25s">
-      <rect x="0" y="0" width="40" height="30" rx="6" fill="url(#p1-grad)" filter="url(#p1-glow)" />
-      <path d="M 15 10 L 25 15 L 15 20" fill="${colors.alabasterGrey}" />
+      <!-- Window Body -->
+      <rect x="0" y="0" width="44" height="32" rx="4" fill="url(#p1-grad)" filter="url(#p1-glow)" />
+      <!-- Window Header -->
+      <path d="M 0 4 Q 0 0 4 0 L 40 0 Q 44 0 44 4 L 44 10 L 0 10 Z" fill="#1a1a23" opacity="0.4" />
+      <circle cx="6" cy="5" r="1.5" fill="#e6e6e6" />
+      <circle cx="11" cy="5" r="1.5" fill="#e6e6e6" />
+      <circle cx="16" cy="5" r="1.5" fill="#e6e6e6" />
+      <!-- Code brackets </> -->
+      <path d="M 13 14 L 7 19 L 13 24 M 31 14 L 37 19 L 31 24 M 25 12 L 19 26" fill="none" stroke="#e6e6e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </g>
   </g>
 
@@ -74,15 +88,15 @@ export const anim1 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 3
   <g transform="translate(50, 180)">
     <g class="p1-doc">
       <!-- Doc Icon -->
-      <path d="M 0 0 L 30 0 L 40 10 L 40 40 L 0 40 Z" fill="${colors.shadowGrey}" stroke="${colors.alabasterGrey}" stroke-width="2" />
-      <rect x="8" y="15" width="24" height="3" rx="1.5" fill="${colors.alabasterGrey}" opacity="0.4" />
-      <rect x="8" y="23" width="16" height="3" rx="1.5" fill="${colors.alabasterGrey}" opacity="0.4" />
+      <path d="M 0 0 L 30 0 L 40 10 L 40 40 L 0 40 Z" fill="#1a1a23" stroke="#e6e6e6" stroke-width="2" />
+      <rect x="8" y="15" width="24" height="3" rx="1.5" fill="#e6e6e6" opacity="0.4" />
+      <rect x="8" y="23" width="16" height="3" rx="1.5" fill="#e6e6e6" opacity="0.4" />
       
       <!-- Out of Sync Warning -->
       <g class="p1-alert" transform="translate(30, -10)">
         <circle cx="10" cy="10" r="10" fill="#ff4444" filter="url(#p1-glow)" />
-        <line x1="10" y1="5" x2="10" y2="12" stroke="${colors.alabasterGrey}" stroke-width="2" stroke-linecap="round" />
-        <circle cx="10" cy="15" r="1" fill="${colors.alabasterGrey}" />
+        <line x1="10" y1="5" x2="10" y2="12" stroke="#e6e6e6" stroke-width="2" stroke-linecap="round" />
+        <circle cx="10" cy="15" r="1" fill="#e6e6e6" />
       </g>
     </g>
   </g>
@@ -158,10 +172,14 @@ export const anim3 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 3
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
+    <linearGradient id="p3-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b500e6" />
+      <stop offset="100%" stop-color="#e67000" />
+    </linearGradient>
   </defs>
   <style>
     @keyframes p3-trace {
-      0% { stroke-dashoffset: 800; }
+      0%, 10% { stroke-dashoffset: 600; }
       80%, 100% { stroke-dashoffset: 0; }
     }
     @keyframes p3-pulseScanner {
@@ -174,42 +192,64 @@ export const anim3 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 3
       75% { transform: rotate(-5deg); }
     }
 
-    .p3-path { stroke-dasharray: 800; stroke-dashoffset: 800; animation: p3-trace 8s ease-in-out infinite; }
+    .p3-path { stroke-dasharray: 600; stroke-dashoffset: 600; animation: p3-trace 6s ease-in-out infinite; }
     .p3-scanner { animation: p3-pulseScanner 1.5s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
     .p3-dev { animation: p3-headache 4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
   </style>
 
-  <!-- Complex, Tangled Web of Code/Dependencies -->
-  <g stroke="${colors.shadowGrey}" stroke-width="2" fill="none" opacity="0.6">
-    <path d="M 120 100 C 180 50, 150 200, 220 180 S 280 80, 320 150" />
-    <path d="M 120 200 C 180 250, 200 80, 250 120 S 280 250, 350 200" />
-    <path d="M 150 150 C 180 150, 200 200, 250 200 S 280 100, 350 100" />
-    <path d="M 200 50 L 200 250" stroke-dasharray="4 4" />
-    <path d="M 280 50 L 280 250" stroke-dasharray="4 4" />
+  <!-- Complex Maze Grid (Background Architecture) -->
+  <g stroke="#1a1a23" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+    <path d="M 100 60 L 100 140 L 60 140" />
+    <path d="M 120 200 L 120 240 L 180 240 L 180 220" />
+    <path d="M 200 100 L 200 120 L 280 120 L 280 100" />
+    <path d="M 240 60 L 280 60 L 280 80" />
+    <path d="M 280 180 L 280 240 L 340 240 L 340 180" />
+    <path d="M 140 160 L 100 160 L 100 200 L 140 200" />
+    <path d="M 300 150 L 300 100 L 340 100" />
+    <path d="M 160 80 L 160 120 L 220 120" />
+    <path d="M 240 160 L 240 200 L 200 200" />
   </g>
 
-  <!-- Inactive Nodes -->
-  <circle cx="150" cy="150" r="6" fill="${colors.shadowGrey}" />
-  <circle cx="200" cy="120" r="6" fill="${colors.shadowGrey}" />
-  <circle cx="220" cy="180" r="6" fill="${colors.shadowGrey}" />
-  <circle cx="280" cy="120" r="6" fill="${colors.shadowGrey}" />
-  <circle cx="250" cy="200" r="6" fill="${colors.shadowGrey}" />
+  <!-- Inactive Nodes (Dead ends & intersections) -->
+  <g fill="#1a1a23">
+    <circle cx="100" cy="60" r="4" />
+    <circle cx="60" cy="140" r="4" />
+    <circle cx="120" cy="200" r="4" />
+    <circle cx="180" cy="220" r="4" />
+    <circle cx="200" cy="100" r="4" />
+    <circle cx="280" cy="100" r="4" />
+    <circle cx="240" cy="60" r="4" />
+    <circle cx="280" cy="80" r="4" />
+    <circle cx="280" cy="180" r="4" />
+    <circle cx="340" cy="180" r="4" />
+    <circle cx="100" cy="160" r="4" />
+    <circle cx="140" cy="200" r="4" />
+    <circle cx="340" cy="100" r="4" />
+    <circle cx="160" cy="80" r="4" />
+    <circle cx="200" cy="200" r="4" />
+  </g>
 
-  <!-- The "Reverse Engineering" Tracing Path -->
-  <path d="M 120 100 C 180 50, 150 200, 220 180 S 280 80, 320 150" fill="none" stroke="${colors.autumnLeaf}" stroke-width="4" stroke-linecap="round" class="p3-path" filter="url(#p3-glow)" />
+  <!-- The Tracing Path (Navigating the maze) -->
+  <path d="M 80 100 L 140 100 L 140 60 L 220 60 L 220 140 L 160 140 L 160 200 L 260 200 L 260 150 L 320 150" fill="none" stroke="#e67000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="p3-path" filter="url(#p3-glow)" />
 
-  <!-- Target Found Node -->
-  <circle cx="320" cy="150" r="8" fill="${colors.purple}" filter="url(#p3-glow)" />
+  <!-- Target Found Node (The Goal) -->
+  <g transform="translate(320, 150)">
+    <circle cx="0" cy="0" r="18" fill="url(#p3-grad)" filter="url(#p3-glow)" opacity="0.4" class="p3-scanner" />
+    <circle cx="0" cy="0" r="12" fill="url(#p3-grad)" filter="url(#p3-glow)" />
+    <!-- Checkmark indicating success -->
+    <path d="M -4 0 L -1 3 L 5 -3" fill="none" stroke="#e6e6e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="-16" y="-16" width="32" height="32" rx="6" fill="none" stroke="#e67000" stroke-width="2" />
+  </g>
 
   <!-- The Developer trying to navigate -->
   <g transform="translate(60, 100)">
     <g class="p3-dev">
-      <rect x="-20" y="-15" width="40" height="30" rx="4" fill="${colors.shadowGrey}" stroke="${colors.purple}" stroke-width="2" />
-      <circle cx="-5" cy="0" r="3" fill="${colors.alabasterGrey}" />
-      <circle cx="5" cy="0" r="3" fill="${colors.alabasterGrey}" />
-      <path d="M -5 8 Q 0 5 5 8" fill="none" stroke="${colors.alabasterGrey}" stroke-linecap="round" />
+      <rect x="-20" y="-15" width="40" height="30" rx="4" fill="#1a1a23" stroke="#b500e6" stroke-width="2" />
+      <circle cx="-5" cy="0" r="3" fill="#e6e6e6" />
+      <circle cx="5" cy="0" r="3" fill="#e6e6e6" />
+      <path d="M -5 8 Q 0 5 5 8" fill="none" stroke="#e6e6e6" stroke-linecap="round" />
       <!-- Scanning Radar pulse -->
-      <circle cx="20" cy="0" r="10" fill="none" stroke="${colors.autumnLeaf}" stroke-width="2" class="p3-scanner" />
+      <circle cx="20" cy="0" r="10" fill="none" stroke="#e67000" stroke-width="2" class="p3-scanner" />
     </g>
   </g>
 </svg>`;

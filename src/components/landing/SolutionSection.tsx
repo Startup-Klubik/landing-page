@@ -101,9 +101,10 @@ const SolutionSection = () => {
         {/* App screenshots carousel */}
         <div className="mt-28 max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              See Dokero in <span className="text-gradient">Action</span>
-            </h3>
+            <h2 className="section-heading mb-6">
+            See Dokero in
+            <span className="text-gradient"> Action</span>
+          </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Turn complex code into clear, interactive diagrams on demand. See how easily your team can map dependencies and understand their systems.
             </p>
