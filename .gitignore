@@ -33,6 +33,7 @@ dist-ssr
 *.bak
 vite.config.d.ts
 vite.config.js
+vite.config.ts.timestamp-*
 
 # Build artifacts in src (should not be committed)
 src/**/*.js
