@@ -98,23 +98,26 @@ const SolutionSection = () => {
         </div>
 
         {/* App screenshots carousel */}
-        <div className="mt-28 max-w-5xl mx-auto">
+        <div className="mt-28 max-w-5xl mx-auto w-full">
           <div className="text-center mb-12">
             <h2 className="section-heading mb-6">
-            See Dokero in
-            <span className="text-gradient"> Action</span>
-          </h2>
+              See Dokero in
+              <span className="text-gradient"> Action</span>
+            </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Turn complex code into clear, interactive diagrams on demand. See how easily your team can map dependencies and understand their systems.
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-xl border border-border/50 bg-muted/20 shadow-2xl">
-            <video 
+          <div className="relative overflow-hidden rounded-xl border border-border/50 shadow-2xl w-full">
+
+            <video
               controls
-              className="w-full h-auto"
+              className="aspect-video"
+              poster="/dokero-thumbnail.png"
+              preload="metadata"
             >
-              <source src="/dokero-cropped.mp4" type="video/mp4" />
+              <source src="/dokero.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
