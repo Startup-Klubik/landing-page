@@ -1,5 +1,4 @@
 import { GitBranch, Zap, GraduationCap, Workflow } from "lucide-react";
-import ScreenshotCarousel from "./ScreenshotCarousel";
 import { colors, anim1, anim2, anim3, anim4 } from "./features_svgs";
 
 const features = [
@@ -110,15 +109,15 @@ const SolutionSection = () => {
             </p>
           </div>
 
-          <ScreenshotCarousel
-            images={[
-              "/knowledge-hub.png",
-              "/tutorial-flow.png",
-              "/git-diff.png",
-            ]}
-            autoPlay={true}
-            interval={5000}
-          />
+          <div className="relative overflow-hidden rounded-xl border border-border/50 bg-muted/20 shadow-2xl">
+            <video 
+              controls
+              className="w-full h-auto"
+            >
+              <source src="/dokero-cropped.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
     </section>
